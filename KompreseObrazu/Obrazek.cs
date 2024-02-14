@@ -17,6 +17,7 @@ namespace Komprese
     /// <param name="filePath">Cesta k obrázku</param>
     public Obrazek(string filePath){
         readImg(filePath);
+        var PraceSObrazkem = new PraceSObrazkem();
     }
     /// <summary>
     /// Metoda spočítá vertikální velikost obrazu na základě počtu řádků ve vstupním CSV souboru
@@ -105,6 +106,29 @@ namespace Komprese
             }
             Console.WriteLine();
         }
+    }
+
+    public class PraceSObrazkem{
+        private int[] pocetBarev;
+
+        public int[] PocetBarev {
+            get{
+                return pocetBarev;
+            }
+            set{
+                pocetBarev=value;
+            }
+        }
+
+        public PraceSObrazkem(){
+            
+        }
+
+        public int vyhledatPix(Obrazek o){
+
+        }   
+
+
     }
   }  
 }
